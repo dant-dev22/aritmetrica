@@ -56,6 +56,10 @@ class DatabaseService:
         Returns:
             list: A list of rows returned by the query.
         """
+        if not self.connection or not self.connection.is_connected():
+            print("Error: No active database connection.")
+            return None
+
         cursor = None
         try:
             cursor = self.connection.cursor()

@@ -21,7 +21,7 @@ class SpotifyAPI:
             )
         )
 
-    def search_artist(self, artist_name: str, limit: int = 5):
+    def search_artist(self, artist_name: str, limit: int = 10):
         """
         Searches for artists by name and returns a list of matching artists.
 
